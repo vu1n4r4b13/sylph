@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/alert.png">
+    <link rel="stylesheet" href="style.css">
+    <title>sylph</title>    
+</head>
+<body>
+
+<div class="video-container">
+    <video autoplay muted>
+        <source src="video/v1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div> 
+
+<div class="container" id="container" style="display: none;">
+    <div class="d2" id="d2">
+        <h1>Expertise</h1>
+        <ol> 
+            <div class="list-row ">
+                        <div class="popup-container">
+
+                              <li class="list-item l1 circle-hover" class="overlay-container" style="background-image: url('images/laptop.png');"></li>
+                               <div class="popup"> Exploit Development</div>
+                        </div>
+              
+                        <div class="popup-container">
+    
+                             <li class="list-item l2" style="background-image: url('images/hacker.png');"></li>
+                             <div class="popup">Penetration Testing </div>
+                        </div>
+               
+                        <div class="popup-container">
+                            <li class="list-item l3" style="background-image: url('images/linux.png');"></li>
+                             <div class="popup"> SysAdmin </div>
+                        </div>
+               
+                        <div class="popup-container">
+                             <li class="list-item l4" style="background-image: url('images/bug.png');"></li><br>
+                               <div class="popup">Bug Hunting </div>
+                        </div>
+           
+                        <div class="popup-container">
+                                 <li class="list-item l5" style="background-image: url('images/code.png');"></li>
+                                 <div class="popup">Web Development </div>
+                        </div>
+            </div>
+            <h1>Connections</h1>
+            <div class="list-row">
+                <a href="https://instagram.com/_sy1ph_"><li class="list-item l6"><img src="images/ig.jpeg" alt="Instagram Logo" width="100" height="100"></li></a>
+                <a href="https://github.com/vu1n4r4b13"><li class="list-item l7" style="background-image: url('images/github.png');"></li></a>
+                <a href="mailto:ie_nyx@proton.me">
+                <li class="list-item l8" style="background-image: url('images/envelope.png');"></li> </a>
+               <a href="https://tryhackme.com/p/Anoopsharma333"><li class="list-item l9" style="background-image: url('images/thm.png');"></li></a>
+                <a href="https://app.hackthebox.com/profile/300715"><li class="list-item l10" style="background-image: url('images/htb.jpeg');"></li></a>
+            </div>
+        </ol>
+    </div>
+</div>  
+
+
+<div id="toggleButton" class="switch">
+    <input id="toggle-btn" class="t" type="checkbox">
+    <label for="toggle-btn"></label>
+</div>
+    
+
+<script src="main.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const toggleButton = document.getElementById("toggle-btn");
+        const container = document.getElementById("container");
+        
+        toggleButton.addEventListener("click", function() {
+            if (container.style.display === "none") {
+                container.style.display = "block";
+            } else {
+                container.style.display = "none";
+            }
+        });
+    });
+
+    // -------------------------popup script----------------
+    document.addEventListener('DOMContentLoaded', function () {
+  const listItem = document.querySelector('.list-item');
+  const popup = listItem.querySelector('.popup');
+
+  listItem.addEventListener('mouseenter', function () {
+    popup.style.display = 'block';
+  });
+
+  listItem.addEventListener('mouseleave', function () {
+    popup.style.display = 'none';
+  });
+});
+
+
+// ------------------------hide------------------
+document.addEventListener("DOMContentLoaded", function() {
+            const toggleButton = document.getElementById("toggle-btn");
+            const body2 = document.querySelector(".body2");
+
+            toggleButton.addEventListener("change", function() {
+                if (toggleButton.checked) {
+                    body2.style.visibility = "hidden";
+                } else {
+                    body2.style.visibility = "visible";
+                }
+            });
+        });
+</script>
+<footer>© 2024 sylph
+
+    <div class="container">
+        <div class="cat">
+            <div class="ear"></div>
+            <div class="eye"></div>
+            <div class="mouth"></div>
+            <div class="nose"></div>
+            <div class="tail"></div>
+            <div class="body"></div>
+            <div class="bubble"></div>
+        </div>
+    </div>
+
+</footer>
+</body>
+</html>
